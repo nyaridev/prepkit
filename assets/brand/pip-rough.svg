@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor">
+  <title>PrepKit (rough print)</title>
+  <defs><filter id="pk-rough" x="-5%" y="-5%" width="110%" height="110%" color-interpolation-filters="sRGB"><feTurbulence type="fractalNoise" baseFrequency="0.022" numOctaves="3" seed="7" result="warp"/><feDisplacementMap in="SourceGraphic" in2="warp" scale="16" xChannelSelector="R" yChannelSelector="G" result="ink"/><feTurbulence type="fractalNoise" baseFrequency="0.16" numOctaves="3" seed="3" result="grain"/><feColorMatrix in="grain" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -32 0 0 0 23.4" result="holes"/><feComposite in="ink" in2="holes" operator="in"/></filter></defs>
+  <g filter="url(#pk-rough)"><path fill-rule="evenodd" d="M156 470C118 470 88 446 90 408L94 186C96 106 160 46 244 44H276C366 44 430 108 426 198C424 288 360 354 272 356H244C230 356 220 366 220 380L222 408C224 446 194 470 156 470ZM212 200A24 46 0 1 0 260 200A24 46 0 1 0 212 200ZM300 200A24 46 0 1 0 348 200A24 46 0 1 0 300 200Z"/></g>
+</svg>

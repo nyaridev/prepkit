@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="currentColor">
+  <title>PrepKit — Drip favicon</title>
+  <style>.pk-accent{fill:var(--pk-accent,#7b5cff)}</style>
+  <path fill-rule="evenodd" d="M16 1.5C17.5 5.5 21.5 9 24 12.5C26 15.5 27 18.5 27 21C27 26.5 22.5 30 16 30C9.5 30 5 26.5 5 21C5 18 6.5 15.5 8.5 12.5C11 9 14.5 5.5 16 1.5ZM12.5 17.5H12.5A1.5 1.5 0 0 1 14 19V22.5A1.5 1.5 0 0 1 12.5 24H12.5A1.5 1.5 0 0 1 11 22.5V19A1.5 1.5 0 0 1 12.5 17.5ZM19.5 17.5H19.5A1.5 1.5 0 0 1 21 19V22.5A1.5 1.5 0 0 1 19.5 24H19.5A1.5 1.5 0 0 1 18 22.5V19A1.5 1.5 0 0 1 19.5 17.5Z"/>
+</svg>

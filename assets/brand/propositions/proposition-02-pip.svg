@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor">
+  <title>PrepKit — Pip</title>
+  <style>.pk-accent{fill:var(--pk-accent,#7b5cff)}</style>
+  <path fill-rule="evenodd" d="M170 472C136 472 108 446 108 412V182C108 106 170 50 250 50H284C374 50 442 116 442 206C442 294 374 362 284 362H254C242 362 234 370 234 382V412C234 446 204 472 170 472ZM229 204A23 44 0 1 0 275 204A23 44 0 1 0 229 204ZM315 204A23 44 0 1 0 361 204A23 44 0 1 0 315 204Z"/><path class="pk-accent" d="M384 380Q397 423 440 436Q397 449 384 492Q371 449 328 436Q371 423 384 380Z"/>
+</svg>

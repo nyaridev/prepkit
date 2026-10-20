@@ -40,6 +40,7 @@ does the work; the desktop app (Tauri 2 + React) and the CLI are thin front ends
 | `crates/prepkit-cli/` | `prepkit-cli` (clap): `main.rs` (commands), `report.rs` (output) |
 | `src-tauri/` | The app shell: `commands.rs` (tools + progress events), `files.rs` (expands inputs into file lists; opens listed images to the asset protocol for previews), `settings.rs` (settings JSON), `jobs.rs` (cancel flags), `tauri.conf.json` (borderless window), `capabilities/` |
 | `src/` | The UI: `app/` (App, TitleBar, Tabs, hooks), `features/<tool>/` (one folder per tab), `components/` (FilePanel, Thumb, RunPanel, controls), `lib/` (backend, settings, types), `styles/` (ume-sync-style tokens) |
+| `assets/brand/` | The Pip mark, favicon, app icon source, UI icons (`icons/`), README banners, `preview.html`; `propositions/` holds the explorations |
 | `prepkit.cmd` | Launcher for scripts and agents |
 | `build.bat`, `start-dev.bat` | Release build / dev window |
 

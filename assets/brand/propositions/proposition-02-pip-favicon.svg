@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="currentColor">
+  <title>PrepKit — Pip favicon</title>
+  <style>.pk-accent{fill:var(--pk-accent,#7b5cff)}</style>
+  <path fill-rule="evenodd" d="M6 26V11C6 6 10 2 15 2H18C23.5 2 28 6.5 28 12C28 17.5 23.5 22 18 22H15V26A4.5 4.5 0 0 1 6 26ZM16.3 9H16.3A1.25 1.25 0 0 1 17.5 10.3V13.8A1.25 1.25 0 0 1 16.3 15H16.3A1.25 1.25 0 0 1 15 13.8V10.3A1.25 1.25 0 0 1 16.3 9ZM22.3 9H22.3A1.25 1.25 0 0 1 23.5 10.3V13.8A1.25 1.25 0 0 1 22.3 15H22.3A1.25 1.25 0 0 1 21 13.8V10.3A1.25 1.25 0 0 1 22.3 9Z"/><path class="pk-accent" d="M25 21.5Q26.4 25.1 30 26.5Q26.4 27.9 25 31.5Q23.6 27.9 20 26.5Q23.6 25.1 25 21.5Z"/>
+</svg>

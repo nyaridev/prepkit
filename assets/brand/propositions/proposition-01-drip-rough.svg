@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor">
+  <title>PrepKit — Drip</title>
+  <style>.pk-accent{fill:var(--pk-accent,#7b5cff)}</style>
+  <defs><filter id="pk-rough" x="-5%" y="-5%" width="110%" height="110%" color-interpolation-filters="sRGB"><feTurbulence type="fractalNoise" baseFrequency="0.022" numOctaves="3" seed="7" result="warp"/><feDisplacementMap in="SourceGraphic" in2="warp" scale="16" xChannelSelector="R" yChannelSelector="G" result="ink"/><feTurbulence type="fractalNoise" baseFrequency="0.16" numOctaves="3" seed="3" result="grain"/><feColorMatrix in="grain" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -32 0 0 0 23.4" result="holes"/><feComposite in="ink" in2="holes" operator="in"/></filter></defs>
+  <g filter="url(#pk-rough)"><path fill-rule="evenodd" d="M262 36C286 98 344 150 384 214C418 268 432 304 430 344C426 428 352 478 262 478C170 478 86 426 84 340C82 286 112 240 152 194C196 142 240 100 262 36ZM188 332A24 44 0 1 0 236 332A24 44 0 1 0 188 332ZM282 332A24 44 0 1 0 330 332A24 44 0 1 0 282 332Z"/><path class="pk-accent" d="M420 44Q434 90 480 104Q434 118 420 164Q406 118 360 104Q406 90 420 44Z"/></g>
+</svg>

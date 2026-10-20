@@ -1,5 +1,8 @@
 <p align="center">
-  <img src="docs/assets/banner.svg" width="100%" alt="PrepKit — get game assets ready in one drop" />
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/brand/banner-dark.svg" />
+    <img src="assets/brand/banner-light.svg" width="100%" alt="PrepKit — get game assets ready in one drop" />
+  </picture>
 </p>
 
 <p align="center">

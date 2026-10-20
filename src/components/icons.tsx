@@ -29,22 +29,13 @@ const Dot = ({ cx, cy, r = 0.9 }: { cx: number; cy: number; r?: number }) => (
 export function LogoMark() {
   return (
     <svg className="icon" width="20" height="20" viewBox="0 0 32 32" aria-hidden="true">
-      <defs>
-        <linearGradient id="logo-fill" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0" stopColor="var(--accent)" />
-          <stop offset="1" stopColor="var(--accent-deep)" />
-        </linearGradient>
-      </defs>
-      <rect width="32" height="32" rx="7" fill="url(#logo-fill)" />
+      <rect width="32" height="32" rx="7" fill="var(--accent)" />
+      {/* Pip, the brand mark (assets/brand/pip-favicon.svg), with its eyes cut through to the tile. */}
       <path
-        d="M11 23V9h6.2a4.6 4.6 0 0 1 0 9.2H11"
-        fill="none"
-        stroke="var(--accent-text)"
-        strokeWidth="3"
-        strokeLinecap="round"
-        strokeLinejoin="round"
+        fill="var(--accent-text)"
+        fillRule="evenodd"
+        d="M8.7 22.9V13C8.7 9.7 11.4 7.1 14.7 7.1H16.7C20.3 7.1 23.3 10.1 23.3 13.7C23.3 17.3 20.3 20.3 16.7 20.3H14.7V22.9A3 3 0 0 1 8.7 22.9ZM14.4 12.6A0.8 0.8 0 0 1 16 12.6V14.9A0.8 0.8 0 0 1 14.4 14.9ZM18 12.6A0.8 0.8 0 0 1 19.6 12.6V14.9A0.8 0.8 0 0 1 18 14.9Z"
       />
-      <circle cx="23" cy="23" r="2.2" fill="var(--gold)" />
     </svg>
   );
 }
