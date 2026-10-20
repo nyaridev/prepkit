@@ -1,0 +1,185 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="780" viewBox="0 0 1280 780" role="img" aria-labelledby="t d">
+  <title id="t">PrepKit window</title>
+  <desc id="d">The PrepKit window: a folder of sprites in grid view, Pixel Fix options, and results with the Fix button at the bottom.</desc>
+  <defs>
+    <radialGradient id="gv" cx="0.18" cy="0.1" r="0.5">
+      <stop offset="0" stop-color="#7b5cff" stop-opacity="0.2"/>
+      <stop offset="1" stop-color="#7b5cff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="gt" cx="0.88" cy="0.95" r="0.45">
+      <stop offset="0" stop-color="#5fd4c8" stop-opacity="0.1"/>
+      <stop offset="1" stop-color="#5fd4c8" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#7b5cff"/>
+      <stop offset="1" stop-color="#5633e6"/>
+    </linearGradient>
+    <linearGradient id="orn" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#e6c27a" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#e6c27a" stop-opacity="0.5"/>
+      <stop offset="1" stop-color="#e6c27a" stop-opacity="0"/>
+    </linearGradient>
+    <pattern id="ck" width="14" height="14" patternUnits="userSpaceOnUse">
+      <rect width="14" height="14" fill="#0d1119"/>
+      <rect width="7" height="7" fill="#151a25"/>
+      <rect x="7" y="7" width="7" height="7" fill="#151a25"/>
+    </pattern>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="18" stdDeviation="22" flood-color="#000" flood-opacity="0.55"/>
+    </filter>
+    <clipPath id="win"><rect x="40" y="30" width="1200" height="720" rx="18"/></clipPath>
+    <style>
+      .ui { font-family: 'Nunito Sans', 'Segoe UI', Helvetica, Arial, sans-serif; }
+      .mono { font-family: 'JetBrains Mono', Consolas, monospace; }
+      .label { font-size: 12px; font-weight: 800; letter-spacing: 1.4px; fill: #636d82; }
+      .t { font-size: 15px; fill: #e9edf5; }
+      .m { font-size: 15px; fill: #a1aabe; font-weight: 600; }
+      .f { font-size: 13px; fill: #636d82; }
+      .panel { fill: #0b0e15; stroke: #181d29; }
+    </style>
+  </defs>
+
+  <rect x="40" y="30" width="1200" height="720" rx="18" fill="#05060a" filter="url(#shadow)"/>
+  <g clip-path="url(#win)" class="ui">
+    <rect x="40" y="30" width="1200" height="720" fill="url(#gv)"/>
+    <rect x="40" y="30" width="1200" height="720" fill="url(#gt)"/>
+
+    <!-- Title bar -->
+    <rect x="62" y="44" width="26" height="26" rx="6" fill="url(#accent)"/>
+    <path d="M71 64V50h6a4.5 4.5 0 0 1 0 9h-6" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="82.5" cy="64" r="1.9" fill="#e6c27a"/>
+    <text x="100" y="63" fill="#e9edf5" font-family="Cinzel, Georgia, serif" font-size="18" font-weight="700" letter-spacing="1" style="font-variant: small-caps">PrepKit</text>
+    <text x="200" y="63" class="f">v0.1.0</text>
+    <path d="M1124 57h12M1166 51h11v11h-11zM1206 51l11 11M1217 51l-11 11" stroke="#a1aabe" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+    <rect x="40" y="84" width="1200" height="1" fill="url(#orn)"/>
+
+    <!-- Tabs -->
+    <rect x="58" y="100" width="296" height="42" rx="13" fill="#020306" stroke="#181d29"/>
+    <rect x="62" y="104" width="128" height="34" rx="10" fill="#171c28" stroke="#262e40"/>
+    <rect x="80" y="114" width="15" height="13" rx="3" fill="none" stroke="#b3aaff" stroke-width="1.6"/>
+    <text x="104" y="126" class="t" font-weight="800">Pixel Fix</text>
+    <path d="M212 118v5M216 115v11M220 112v17M224 116v9M228 119v3" stroke="#636d82" stroke-width="1.6" stroke-linecap="round"/>
+    <text x="238" y="126" class="f" font-size="15" font-weight="800">Audio Convert</text>
+
+    <!-- Files panel -->
+    <rect x="58" y="158" width="764" height="574" rx="16" class="panel"/>
+    <text x="78" y="190" class="t" font-weight="800">Images</text>
+    <rect x="140" y="175" width="28" height="20" rx="10" fill="#7b5cff" fill-opacity="0.18"/>
+    <text x="154" y="190" fill="#b3aaff" font-size="12" font-weight="800" text-anchor="middle">8</text>
+    <rect x="620" y="171" width="86" height="30" rx="8" fill="#10141d" stroke="#262e40"/>
+    <text x="663" y="191" class="t" font-size="13" font-weight="800" text-anchor="middle">Folder</text>
+    <rect x="714" y="171" width="74" height="30" rx="8" fill="#10141d" stroke="#262e40"/>
+    <text x="751" y="191" class="t" font-size="13" font-weight="800" text-anchor="middle">Files</text>
+    <rect x="58" y="212" width="764" height="1" fill="#181d29"/>
+
+    <path d="M80 232l5 5-5 5" stroke="#636d82" stroke-width="1.6" fill="none" stroke-linecap="round" transform="rotate(90 82.5 237)"/>
+    <path d="M98 231.5c0-.8.7-1.5 1.5-1.5h4.4l1.6 1.6h6c.8 0 1.5.7 1.5 1.5v6.4c0 .8-.7 1.5-1.5 1.5h-12c-.8 0-1.5-.7-1.5-1.5z" fill="none" stroke="#e6c27a" stroke-width="1.5"/>
+    <text x="122" y="242" class="t" font-weight="800">ui</text>
+    <text x="142" y="242" class="f">8</text>
+
+    <g class="mono" font-size="12" fill="#a1aabe" text-anchor="middle">
+      <g transform="translate(96 262)">
+        <rect width="160" height="160" rx="12" fill="url(#ck)" stroke="#181d29"/>
+        <circle cx="80" cy="80" r="46" fill="#f2a33c"/><circle cx="80" cy="80" r="32" fill="none" stroke="#ffd27a" stroke-width="6"/>
+        <text x="80" y="184">coin.png</text>
+      </g>
+      <g transform="translate(276 262)">
+        <rect width="160" height="160" rx="12" fill="url(#ck)" stroke="#181d29"/>
+        <path d="M80 34l40 30-40 62-40-62z" fill="#5fd4c8"/><path d="M80 34l40 30H40z" fill="#9ff0e6"/>
+        <text x="80" y="184">gem.png</text>
+      </g>
+      <g transform="translate(456 262)">
+        <rect width="160" height="160" rx="12" fill="url(#ck)" stroke="#171c28"/>
+        <path d="M80 124s-46-28-46-60a24 24 0 0 1 46-10 24 24 0 0 1 46 10c0 32-46 60-46 60z" fill="#ef6b73"/>
+        <text x="80" y="184">heart.png</text>
+      </g>
+      <g transform="translate(636 262)">
+        <rect width="160" height="160" rx="12" fill="url(#ck)" stroke="#181d29"/>
+        <path d="M44 116c0-48 30-78 76-80-2 46-32 80-76 80z" fill="#5fd68a"/><path d="M50 110l58-62" stroke="#2c8a52" stroke-width="4" stroke-linecap="round"/>
+        <text x="80" y="184">leaf.png</text>
+      </g>
+      <g transform="translate(96 470)">
+        <rect width="160" height="160" rx="12" fill="url(#ck)" stroke="#181d29"/>
+        <path d="M80 34l12 28 30 3-23 20 7 30-26-16-26 16 7-30-23-20 30-3z" fill="#e6c27a"/>
+        <text x="80" y="184">star.png</text>
+      </g>
+      <g transform="translate(276 470)">
+        <rect width="160" height="160" rx="12" fill="url(#ck)" stroke="#181d29"/>
+        <rect x="38" y="52" width="84" height="64" rx="10" fill="#8f6a3e"/><rect x="38" y="52" width="84" height="22" rx="10" fill="#b48a52"/><rect x="72" y="70" width="16" height="18" rx="3" fill="#e6c27a"/>
+        <text x="80" y="184">chest.png</text>
+      </g>
+      <g transform="translate(456 470)">
+        <rect width="160" height="160" rx="12" fill="url(#ck)" stroke="#181d29"/>
+        <circle cx="80" cy="80" r="40" fill="#7b5cff"/><circle cx="66" cy="66" r="12" fill="#b3aaff"/>
+        <text x="80" y="184">orb.png</text>
+      </g>
+      <g transform="translate(636 470)">
+        <rect width="160" height="160" rx="12" fill="url(#ck)" stroke="#181d29"/>
+        <path d="M52 112l52-52M92 48l20 20M64 100l-10 10" stroke="#c9d2e3" stroke-width="10" stroke-linecap="round"/><path d="M62 90l18 18" stroke="#8f6a3e" stroke-width="10" stroke-linecap="round"/>
+        <text x="80" y="184">sword.png</text>
+      </g>
+    </g>
+
+    <!-- Options -->
+    <rect x="838" y="158" width="384" height="214" rx="16" class="panel"/>
+    <text x="858" y="192" class="label">PIXEL FIX</text>
+    <rect x="854" y="206" width="352" height="1" fill="#181d29"/>
+    <text x="858" y="236" class="m">Save to</text>
+    <rect x="1000" y="216" width="206" height="32" rx="10" fill="#020306" stroke="#181d29"/>
+    <rect x="1070" y="219" width="66" height="26" rx="7" fill="#171c28" stroke="#262e40"/>
+    <g font-size="13" font-weight="800" text-anchor="middle">
+      <text x="1035" y="237" fill="#636d82">Replace</text>
+      <text x="1103" y="237" fill="#e9edf5">Folder</text>
+      <text x="1171" y="237" fill="#636d82">Prefix</text>
+    </g>
+    <rect x="854" y="262" width="352" height="1" fill="#181d29"/>
+    <text x="858" y="290" class="m">Folder name</text>
+    <rect x="1066" y="272" width="140" height="30" rx="8" fill="#020306" stroke="#262e40"/>
+    <text x="1080" y="292" class="mono" font-size="13" fill="#e9edf5">fixed</text>
+    <rect x="854" y="314" width="352" height="1" fill="#181d29"/>
+    <text x="858" y="342" class="m">Subfolders</text>
+    <rect x="1166" y="326" width="40" height="23" rx="11.5" fill="url(#accent)"/>
+    <circle cx="1194" cy="337.5" r="8.5" fill="#fff"/>
+
+    <!-- Results -->
+    <rect x="838" y="388" width="384" height="344" rx="16" class="panel"/>
+    <text x="858" y="422" class="label">RESULTS</text>
+    <g font-size="13" font-weight="700" fill="#a1aabe">
+      <circle cx="1124" cy="417" r="3.5" fill="#5fd68a"/><text x="1133" y="422">8</text>
+      <circle cx="1158" cy="417" r="3.5" fill="#636d82"/><text x="1167" y="422">0</text>
+      <circle cx="1192" cy="417" r="3.5" fill="#ef6b73"/><text x="1201" y="422">0</text>
+    </g>
+    <rect x="854" y="436" width="352" height="4" rx="2" fill="url(#accent)"/>
+    <rect x="854" y="450" width="352" height="210" rx="10" fill="#020306" stroke="#181d29"/>
+    <g font-size="14">
+      <g transform="translate(868 466)">
+        <path d="M0 6l4 4 8-9" stroke="#5fd68a" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        <text x="22" y="11" fill="#e9edf5">coin.png</text><text x="322" y="11" class="mono f" font-size="12" text-anchor="end">Fixed</text>
+      </g>
+      <g transform="translate(868 496)">
+        <path d="M0 6l4 4 8-9" stroke="#5fd68a" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        <text x="22" y="11" fill="#e9edf5">gem.png</text><text x="322" y="11" class="mono f" font-size="12" text-anchor="end">Fixed</text>
+      </g>
+      <g transform="translate(868 526)">
+        <path d="M0 6l4 4 8-9" stroke="#5fd68a" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        <text x="22" y="11" fill="#e9edf5">heart.png</text><text x="322" y="11" class="mono f" font-size="12" text-anchor="end">Fixed</text>
+      </g>
+      <g transform="translate(868 556)">
+        <path d="M0 6l4 4 8-9" stroke="#5fd68a" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        <text x="22" y="11" fill="#e9edf5">leaf.png</text><text x="322" y="11" class="mono f" font-size="12" text-anchor="end">Fixed</text>
+      </g>
+      <g transform="translate(868 586)">
+        <path d="M0 6l4 4 8-9" stroke="#5fd68a" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        <text x="22" y="11" fill="#e9edf5">star.png</text><text x="322" y="11" class="mono f" font-size="12" text-anchor="end">Fixed</text>
+      </g>
+      <g transform="translate(868 616)">
+        <path d="M0 6l4 4 8-9" stroke="#5fd68a" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        <text x="22" y="11" fill="#e9edf5">chest.png</text><text x="322" y="11" class="mono f" font-size="12" text-anchor="end">Fixed</text>
+      </g>
+    </g>
+    <rect x="854" y="674" width="352" height="42" rx="12" fill="url(#accent)"/>
+    <rect x="854.5" y="674.5" width="351" height="41" rx="11.5" fill="none" stroke="#fff" stroke-opacity="0.15"/>
+    <text x="1030" y="701" fill="#fff" font-size="16" font-weight="800" text-anchor="middle">Fix 8 images</text>
+  </g>
+  <rect x="40.5" y="30.5" width="1199" height="719" rx="17.5" fill="none" stroke="#262e40"/>
+</svg>

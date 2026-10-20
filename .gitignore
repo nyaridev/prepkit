@@ -1,0 +1,22 @@
+# Builds
+target/
+dist/
+release/
+src-tauri/gen/
+
+# Mobile icons that `tauri icon` also makes (PrepKit is desktop only)
+src-tauri/icons/android/
+src-tauri/icons/ios/
+
+# Dependencies
+node_modules/
+
+# The CLI that prepkit.cmd downloads
+bin/
+
+# Local
+.env
+CLAUDE.local.md
+.claude/settings.local.json
+Thumbs.db
+*.log

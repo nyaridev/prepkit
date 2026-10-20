@@ -1,0 +1,138 @@
+/* Design tokens: every color lives here. Dark only. The look matches ume-sync (and game-forge): deep ink surfaces,
+   a violet accent with a teal partner, gold for ornaments, soft glows behind everything. */
+:root {
+  color-scheme: dark;
+
+  /* Deep ink, never flat black. */
+  --bg: #05060a;
+  --bg-sunken: #020306;
+  --surface: #0b0e15;
+  --surface-2: #10141d;
+  --surface-hover: #171c28;
+  --border: #181d29;
+  --border-strong: #262e40;
+
+  --text: #e9edf5;
+  --text-muted: #a1aabe;
+  --text-faint: #636d82;
+
+  --accent: #7b5cff;
+  --accent-deep: #5633e6;
+  --accent-2: #5fd4c8;
+  --accent-ink: #b3aaff;
+  --accent-text: #ffffff;
+  --gold: #e6c27a;
+  --accent-soft: color-mix(in oklab, var(--accent) 16%, transparent);
+  --accent-line: color-mix(in oklab, var(--accent) 55%, transparent);
+
+  --success: #5fd68a;
+  --warning: #f0b35e;
+  --danger: #ef6b73;
+  --warning-soft: color-mix(in oklab, var(--warning) 12%, transparent);
+  --warning-line: color-mix(in oklab, var(--warning) 35%, transparent);
+  --danger-soft: color-mix(in oklab, var(--danger) 15%, transparent);
+  --close-hover: #c42b1c;
+
+  /* Glows behind the window's content. */
+  --glow-a: rgb(123 92 255 / 0.15);
+  --glow-b: rgb(95 212 200 / 0.08);
+  --glow-c: rgb(230 194 122 / 0.05);
+
+  --checker-a: #151a25;
+  --checker-b: #0d1119;
+
+  --shadow-sm: 0 1px 2px rgb(0 0 0 / 0.4);
+  --shadow-md: 0 10px 28px -12px rgb(0 0 0 / 0.7), 0 2px 6px -2px rgb(0 0 0 / 0.45);
+  --bevel: inset 0 1px 0 rgb(255 255 255 / 0.04);
+
+  /* The window's rounded body sits inside a transparent margin that holds its shadow. */
+  --frame: 10px;
+  --window-radius: 14px;
+  --window-shadow: 0 8px 22px -10px rgb(0 0 0 / 0.75), 0 1px 4px rgb(0 0 0 / 0.45);
+
+  --radius-sm: 8px;
+  --radius: 10px;
+  --radius-lg: 14px;
+
+  --ease-pop: linear(
+    0,
+    0.056,
+    0.193,
+    0.37,
+    0.556,
+    0.728,
+    0.872,
+    0.983,
+    1.059,
+    1.105,
+    1.124,
+    1.124,
+    1.111,
+    1.091,
+    1.068,
+    1.045,
+    1.025,
+    1.009,
+    0.997,
+    0.989,
+    0.985,
+    0.984,
+    0.985,
+    0.987,
+    0.99,
+    0.993,
+    0.996,
+    0.998,
+    1
+  );
+  --ease-bounce: linear(
+    0,
+    0.105,
+    0.352,
+    0.646,
+    0.914,
+    1.111,
+    1.223,
+    1.254,
+    1.225,
+    1.161,
+    1.086,
+    1.019,
+    0.97,
+    0.943,
+    0.936,
+    0.944,
+    0.96,
+    0.979,
+    0.996,
+    1.008,
+    1.015,
+    1.016,
+    1.014,
+    1.01,
+    1.005,
+    1.001,
+    0.998,
+    0.996,
+    1
+  );
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --dur-fast: 140ms;
+  --dur: 260ms;
+  --dur-slow: 520ms;
+  --press: 0.95;
+  --lift: -1px;
+
+  --font: "Nunito Sans Variable", "Nunito Sans", "Segoe UI Variable Text", "Segoe UI", system-ui, sans-serif;
+  --font-display: "Cinzel Variable", "Cinzel", Georgia, serif;
+  --mono: "JetBrains Mono Variable", "JetBrains Mono", "Cascadia Code", Consolas, monospace;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --ease-pop: linear;
+    --ease-bounce: linear;
+    --press: 1;
+    --lift: 0px;
+  }
+}

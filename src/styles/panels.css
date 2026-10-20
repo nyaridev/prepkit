@@ -1,0 +1,260 @@
+/* The options card (ending in the tool's run button), ffmpeg status, and the results panel. */
+
+/* Tiny uppercase section label, shared by cards. */
+.section-label {
+  color: var(--text-faint);
+  font-size: 10.5px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.options {
+  flex-shrink: 0;
+  padding: 2px 14px 14px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: color-mix(in oklab, var(--surface) 88%, transparent);
+  box-shadow: var(--shadow-sm), var(--bevel);
+}
+
+.options-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  height: 40px;
+}
+
+.options-hint {
+  padding-top: 9px;
+  border-top: 1px solid var(--border);
+  color: var(--text-faint);
+  font-family: var(--mono);
+  font-size: 10.5px;
+}
+
+.run-button {
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  max-width: 170px;
+  overflow: hidden;
+  color: var(--text-faint);
+  font-size: 11px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.pill-dot {
+  width: 6px;
+  height: 6px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: var(--success);
+  box-shadow: 0 0 8px var(--success);
+}
+
+.pill-missing .pill-dot {
+  background: var(--warning);
+  box-shadow: 0 0 8px var(--warning);
+}
+
+.banner {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 12px;
+  padding: 10px 12px;
+  border: 1px solid var(--warning-line);
+  border-radius: var(--radius);
+  background: var(--warning-soft);
+}
+
+.banner-text {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  color: var(--text-muted);
+  font-size: 12px;
+}
+
+.banner-text strong {
+  color: var(--warning);
+}
+
+.banner-error {
+  color: var(--danger);
+}
+
+.banner .button {
+  align-self: flex-start;
+}
+
+/* Results. */
+
+.results {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 8px;
+  min-height: 0;
+  padding: 2px 12px 12px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: color-mix(in oklab, var(--surface) 88%, transparent);
+  box-shadow: var(--shadow-sm), var(--bevel);
+}
+
+.results-head {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: space-between;
+  height: 40px;
+}
+
+.results-counts {
+  display: flex;
+  gap: 12px;
+  color: var(--text-muted);
+  font-size: 12px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+.results-error {
+  color: var(--danger);
+  font-size: 12px;
+}
+
+.progress {
+  height: 4px;
+  flex-shrink: 0;
+  overflow: hidden;
+  border-radius: 2px;
+  background: var(--bg-sunken);
+}
+
+progress.progress {
+  display: block;
+  width: 100%;
+  border: none;
+  appearance: none;
+}
+
+progress.progress::-webkit-progress-bar {
+  border-radius: 2px;
+  background: var(--bg-sunken);
+}
+
+progress.progress::-webkit-progress-value {
+  border-radius: 2px;
+  background: linear-gradient(90deg, var(--accent-deep), var(--accent));
+  transition: width 0.2s ease;
+}
+
+.progress-small {
+  height: 3px;
+}
+
+.progress-fill {
+  height: 100%;
+  background: var(--accent);
+  transition: width 0.2s ease;
+}
+
+.count::before {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  margin-right: 6px;
+  border-radius: 50%;
+  background: var(--text-faint);
+  vertical-align: 1px;
+}
+
+.count-written::before {
+  background: var(--success);
+}
+
+.count-failed::before {
+  background: var(--danger);
+}
+
+.log {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  padding: 4px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: color-mix(in oklab, var(--bg-sunken) 70%, transparent);
+  font-size: 12px;
+  user-select: text;
+}
+
+.log-empty {
+  display: grid;
+  place-items: center;
+  color: var(--text-faint);
+  font-size: 11.5px;
+}
+
+.log-item {
+  display: grid;
+  grid-template-columns: 14px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 8px;
+  min-height: 28px;
+  padding: 0 8px;
+  border-radius: 6px;
+}
+
+.log-item:hover {
+  background: var(--surface-2);
+}
+
+.log-icon {
+  display: grid;
+  place-items: center;
+}
+
+.log-written .log-icon {
+  color: var(--success);
+}
+
+.log-skipped .log-icon {
+  color: var(--text-faint);
+}
+
+.log-name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.log-message {
+  max-width: 150px;
+  overflow: hidden;
+  color: var(--text-faint);
+  font-family: var(--mono);
+  font-size: 10.5px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.log-failed .log-icon,
+.log-failed .log-message {
+  color: var(--danger);
+}
+
+.log-end {
+  height: 0;
+}

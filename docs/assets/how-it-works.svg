@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="440" viewBox="0 0 1280 440" role="img" aria-labelledby="t d">
+  <title id="t">How PrepKit's tools work</title>
+  <desc id="d">Pixel Fix fills transparent pixels with the nearest edge color so sprites lose their dark fringe. Audio Convert brings sounds to RMS −14 dBFS and converts them, for example to .ogg.</desc>
+  <defs>
+    <linearGradient id="accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#7b5cff"/>
+      <stop offset="1" stop-color="#5633e6"/>
+    </linearGradient>
+    <radialGradient id="gv" cx="0.1" cy="0" r="0.7">
+      <stop offset="0" stop-color="#7b5cff" stop-opacity="0.16"/>
+      <stop offset="1" stop-color="#7b5cff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="gt" cx="0.9" cy="1" r="0.7">
+      <stop offset="0" stop-color="#5fd4c8" stop-opacity="0.12"/>
+      <stop offset="1" stop-color="#5fd4c8" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="ck" width="20" height="20" patternUnits="userSpaceOnUse">
+      <rect width="20" height="20" fill="#0d1119"/>
+      <rect width="10" height="10" fill="#151a25"/>
+      <rect x="10" y="10" width="10" height="10" fill="#151a25"/>
+    </pattern>
+    <style>
+      .ui { font-family: 'Nunito Sans', 'Segoe UI', Helvetica, Arial, sans-serif; }
+      .mono { font-family: 'JetBrains Mono', Consolas, monospace; }
+      .title { font-size: 22px; font-weight: 800; fill: #e9edf5; }
+      .body { font-size: 15px; fill: #a1aabe; font-weight: 600; }
+      .cap { font-size: 12px; font-weight: 800; letter-spacing: 1.4px; fill: #636d82; }
+    </style>
+  </defs>
+
+  <g class="ui">
+    <!-- Pixel Fix card -->
+    <rect x="1" y="1" width="626" height="438" rx="20" fill="#0b0e15" stroke="#181d29"/>
+    <rect x="1" y="1" width="626" height="438" rx="20" fill="url(#gv)"/>
+    <text x="36" y="56" class="title">Pixel Fix</text>
+    <text x="36" y="86" class="body">Transparent pixels take the nearest edge color,</text>
+    <text x="36" y="108" class="body">so scaled sprites lose their dark fringe.</text>
+
+    <!-- Before: a pixel sprite whose edge blends into black -->
+    <g transform="translate(36 140)">
+      <rect width="240" height="240" rx="14" fill="url(#ck)" stroke="#181d29"/>
+      <g transform="translate(40 40)">
+        <!-- 8x8 grid of 20px pixels; dark fringe on the edge -->
+        <g fill="#5a3418">
+          <rect x="40" y="0" width="80" height="20"/><rect x="0" y="40" width="20" height="80"/><rect x="140" y="40" width="20" height="80"/><rect x="40" y="140" width="80" height="20"/>
+          <rect x="20" y="20" width="20" height="20"/><rect x="120" y="20" width="20" height="20"/><rect x="20" y="120" width="20" height="20"/><rect x="120" y="120" width="20" height="20"/>
+        </g>
+        <rect x="20" y="40" width="120" height="80" fill="#f2a33c"/><rect x="40" y="20" width="80" height="120" fill="#f2a33c"/>
+        <rect x="60" y="60" width="40" height="40" fill="#ffd27a"/>
+      </g>
+      <text x="120" y="268" class="cap" text-anchor="middle">BEFORE</text>
+    </g>
+
+    <path d="M296 260h34M320 250l10 10-10 10" stroke="#b3aaff" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <!-- After: the same sprite, edge color carried out -->
+    <g transform="translate(350 140)">
+      <rect width="240" height="240" rx="14" fill="url(#ck)" stroke="#181d29"/>
+      <g transform="translate(40 40)">
+        <g fill="#f2a33c" fill-opacity="0.9">
+          <rect x="40" y="0" width="80" height="20"/><rect x="0" y="40" width="20" height="80"/><rect x="140" y="40" width="20" height="80"/><rect x="40" y="140" width="80" height="20"/>
+          <rect x="20" y="20" width="20" height="20"/><rect x="120" y="20" width="20" height="20"/><rect x="20" y="120" width="20" height="20"/><rect x="120" y="120" width="20" height="20"/>
+        </g>
+        <rect x="20" y="40" width="120" height="80" fill="#f2a33c"/><rect x="40" y="20" width="80" height="120" fill="#f2a33c"/>
+        <rect x="60" y="60" width="40" height="40" fill="#ffd27a"/>
+      </g>
+      <text x="120" y="268" class="cap" text-anchor="middle">AFTER</text>
+    </g>
+
+    <!-- Audio Convert card -->
+    <rect x="653" y="1" width="626" height="438" rx="20" fill="#0b0e15" stroke="#181d29"/>
+    <rect x="653" y="1" width="626" height="438" rx="20" fill="url(#gt)"/>
+    <text x="688" y="56" class="title">Audio Convert</text>
+    <text x="688" y="86" class="body">Every sound lands at the same loudness (RMS −14 dBFS,</text>
+    <text x="688" y="108" class="body">peaks capped at −1), in the format you need.</text>
+
+    <g transform="translate(688 140)">
+      <rect width="556" height="240" rx="14" fill="#020306" stroke="#181d29"/>
+      <line x1="20" y1="90" x2="536" y2="90" stroke="#e6c27a" stroke-opacity="0.45" stroke-dasharray="5 6"/>
+      <line x1="20" y1="150" x2="536" y2="150" stroke="#e6c27a" stroke-opacity="0.45" stroke-dasharray="5 6"/>
+      <text x="530" y="82" class="mono" font-size="11" fill="#e6c27a" fill-opacity="0.8" text-anchor="end">−14 dBFS</text>
+
+      <!-- Before: uneven, mostly quiet -->
+      <g fill="#262e40">
+        <rect x="28" y="110" width="10" height="20" rx="5"/><rect x="44" y="100" width="10" height="40" rx="5"/><rect x="60" y="114" width="10" height="12" rx="5"/>
+        <rect x="76" y="62" width="10" height="116" rx="5"/><rect x="92" y="106" width="10" height="28" rx="5"/><rect x="108" y="112" width="10" height="16" rx="5"/>
+        <rect x="124" y="98" width="10" height="44" rx="5"/><rect x="140" y="114" width="10" height="12" rx="5"/><rect x="156" y="108" width="10" height="24" rx="5"/>
+        <rect x="172" y="116" width="10" height="8" rx="5"/><rect x="188" y="104" width="10" height="32" rx="5"/><rect x="204" y="113" width="10" height="14" rx="5"/>
+      </g>
+      <text x="121" y="214" class="cap" text-anchor="middle">BEFORE · jump.wav</text>
+
+      <path d="M248 120h40M278 110l10 10-10 10" stroke="#5fd4c8" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+      <!-- After: evened out between the guide lines -->
+      <g fill="url(#accent)">
+        <rect x="312" y="96" width="10" height="48" rx="5"/><rect x="328" y="90" width="10" height="60" rx="5"/><rect x="344" y="100" width="10" height="40" rx="5"/>
+        <rect x="360" y="86" width="10" height="68" rx="5"/><rect x="376" y="92" width="10" height="56" rx="5"/><rect x="392" y="98" width="10" height="44" rx="5"/>
+        <rect x="408" y="90" width="10" height="60" rx="5"/><rect x="424" y="100" width="10" height="40" rx="5"/><rect x="440" y="94" width="10" height="52" rx="5"/>
+        <rect x="456" y="104" width="10" height="32" rx="5"/><rect x="472" y="92" width="10" height="56" rx="5"/><rect x="488" y="100" width="10" height="40" rx="5"/>
+      </g>
+      <text x="405" y="214" class="cap" text-anchor="middle">AFTER · normalized/jump_n.ogg</text>
+    </g>
+  </g>
+</svg>

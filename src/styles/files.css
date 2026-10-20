@@ -1,0 +1,357 @@
+/* The file panel: a header with actions, then one collapsible group per added folder (list or grid). */
+
+.files {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: color-mix(in oklab, var(--surface) 88%, transparent);
+  box-shadow: var(--shadow-sm), var(--bevel);
+  transition:
+    border-color var(--dur-fast),
+    box-shadow var(--dur-fast);
+}
+
+.files-drop {
+  border-color: var(--accent);
+  box-shadow:
+    0 0 0 3px var(--accent-soft),
+    var(--bevel);
+}
+
+.files-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 46px;
+  flex-shrink: 0;
+  padding: 0 8px 0 14px;
+  border-bottom: 1px solid var(--border);
+}
+
+.files-title {
+  font-weight: 800;
+}
+
+.files-count {
+  min-width: 20px;
+  padding: 1px 7px;
+  border-radius: 9px;
+  background: var(--accent-soft);
+  color: var(--accent-ink);
+  font-size: 11px;
+  font-weight: 800;
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+}
+
+.files-tools {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-left: auto;
+}
+
+.view-toggle {
+  display: flex;
+  gap: 2px;
+  margin-right: 4px;
+  padding-right: 8px;
+  border-right: 1px solid var(--border);
+}
+
+.files-body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-height: 0;
+  overflow-y: auto;
+}
+
+/* Empty: the whole area is a drop target and a button that opens the file picker. */
+.files-empty {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-height: 140px;
+  margin: 10px;
+  border: 1.5px dashed var(--border-strong);
+  border-radius: var(--radius);
+  background: color-mix(in oklab, var(--bg-sunken) 55%, transparent);
+  color: var(--text-faint);
+  font-size: 12px;
+  text-align: center;
+  transition:
+    border-color var(--dur-fast),
+    background var(--dur-fast),
+    color var(--dur-fast);
+}
+
+.files-empty .icon {
+  margin-bottom: 4px;
+  color: var(--accent-ink);
+  transition: transform var(--dur) var(--ease-pop);
+}
+
+.files-empty:hover:not(:disabled),
+.files-drop .files-empty {
+  border-color: var(--accent-line);
+  background: var(--accent-soft);
+  color: var(--text-muted);
+}
+
+.files-empty:hover:not(:disabled) .icon {
+  transform: translateY(-2px);
+}
+
+.files-empty:disabled {
+  cursor: default;
+}
+
+.files-empty-title {
+  color: var(--text);
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.files-empty-types {
+  margin-top: 6px;
+  font-family: var(--mono);
+  font-size: 10.5px;
+}
+
+/* Groups. */
+
+.groups {
+  padding: 6px;
+}
+
+.group + .group {
+  margin-top: 4px;
+}
+
+.group-header {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding-right: 4px;
+  border-radius: var(--radius-sm);
+}
+
+.group-header:hover {
+  background: color-mix(in oklab, var(--surface-hover) 70%, transparent);
+}
+
+.group-toggle {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+  height: 32px;
+  padding: 0 6px;
+  border: none;
+  background: transparent;
+  text-align: left;
+}
+
+.group-chevron {
+  display: grid;
+  place-items: center;
+  color: var(--text-faint);
+  transition: transform var(--dur) var(--ease-out);
+}
+
+.group-chevron-open {
+  transform: rotate(90deg);
+}
+
+.group-icon {
+  display: grid;
+  place-items: center;
+  color: var(--gold);
+}
+
+.group-name {
+  overflow: hidden;
+  font-weight: 800;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.group-count {
+  color: var(--text-faint);
+  font-size: 11.5px;
+  font-variant-numeric: tabular-nums;
+}
+
+.group-empty {
+  padding: 6px 12px 8px 50px;
+  color: var(--text-faint);
+  font-size: 12px;
+}
+
+/* List rows. */
+
+.file-list {
+  padding: 2px 0 4px 22px;
+}
+
+.file-row {
+  display: grid;
+  grid-template-columns: auto auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 10px;
+  min-height: 36px;
+  padding: 3px 4px;
+  border-radius: var(--radius-sm);
+}
+
+.file-row:hover {
+  background: var(--surface-hover);
+}
+
+.file-icon {
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 7px;
+  background: var(--surface-2);
+  color: var(--accent-ink);
+}
+
+.file-name {
+  white-space: nowrap;
+}
+
+.file-sub {
+  overflow: hidden;
+  color: var(--text-faint);
+  font-family: var(--mono);
+  font-size: 10.5px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.file-row .icon-button {
+  opacity: 0;
+}
+
+.file-row:hover .icon-button,
+.file-row .icon-button:focus-visible {
+  opacity: 1;
+}
+
+/* Previews. */
+
+.thumb {
+  display: grid;
+  flex-shrink: 0;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 7px;
+  background: repeating-conic-gradient(var(--checker-a) 0 25%, var(--checker-b) 0 50%) 0 0 / 8px 8px;
+  color: var(--text-faint);
+}
+
+.thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.thumb-large {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1;
+  border-radius: var(--radius);
+  background-size: 14px 14px;
+}
+
+/* Grid tiles. */
+
+.file-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  gap: 8px;
+  padding: 4px 4px 8px 26px;
+}
+
+.file-tile {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 2px;
+  min-width: 0;
+  padding: 6px 6px 7px;
+  border: 1px solid transparent;
+  border-radius: var(--radius);
+  transition:
+    border-color var(--dur-fast),
+    background var(--dur-fast);
+}
+
+.file-tile:hover {
+  border-color: var(--border-strong);
+  background: var(--surface-hover);
+}
+
+.tile-name,
+.tile-sub {
+  overflow: hidden;
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.tile-name {
+  margin-top: 4px;
+  color: var(--text-muted);
+  font-size: 11.5px;
+}
+
+.tile-sub {
+  color: var(--text-faint);
+  font-family: var(--mono);
+  font-size: 10px;
+}
+
+.tile-remove {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: grid;
+  place-items: center;
+  width: 22px;
+  height: 22px;
+  padding: 0;
+  border: 1px solid var(--border-strong);
+  border-radius: 50%;
+  background: color-mix(in oklab, var(--bg) 88%, transparent);
+  color: var(--text-muted);
+  opacity: 0;
+  transition:
+    opacity var(--dur-fast),
+    color var(--dur-fast),
+    background var(--dur-fast);
+}
+
+.file-tile:hover .tile-remove,
+.tile-remove:focus-visible {
+  opacity: 1;
+}
+
+.tile-remove:hover:not(:disabled) {
+  border-color: color-mix(in oklab, var(--danger) 50%, var(--border-strong));
+  background: var(--danger-soft);
+  color: var(--danger);
+}
