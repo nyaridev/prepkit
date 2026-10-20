@@ -39,7 +39,7 @@ does the work; the desktop app (Tauri 2 + React) and the CLI are thin front ends
 | `crates/prepkit-core/` | All tool logic: `pixel_fix/` (fill + EDT), `audio/` (probe, export args, normalize), `ffmpeg/` (locate, install, user PATH), `batch.rs` (shared results, parallel runner, file discovery) |
 | `crates/prepkit-cli/` | `prepkit-cli` (clap): `main.rs` (commands), `report.rs` (output) |
 | `src-tauri/` | The app shell: `commands.rs` (tools + progress events), `files.rs` (expands inputs into file lists; opens listed images to the asset protocol for previews), `settings.rs` (settings JSON), `jobs.rs` (cancel flags), `tauri.conf.json` (borderless window), `capabilities/` |
-| `src/` | The UI: `app/` (App, TitleBar, Tabs, hooks), `features/<tool>/` (one folder per tab), `components/` (FilePanel, Thumb, RunPanel, controls), `lib/` (backend, settings, types), `styles/` (ume-sync-style tokens) |
+| `src/` | The UI: `app/` (App, TitleBar, Tabs, hooks), `features/<tool>/` (one folder per tab), `components/` (FilePanel, Thumb, RunPanel, controls), `lib/` (backend, settings, types), `styles/` (design tokens) |
 | `assets/brand/` | The Pip mark, favicon, app icon source, UI icons (`icons/`), README banners, `preview.html`; `propositions/` holds the explorations |
 | `prepkit.cmd` | Launcher for scripts and agents |
 | `build.bat`, `start-dev.bat` | Release build / dev window |
@@ -62,9 +62,10 @@ does the work; the desktop app (Tauri 2 + React) and the CLI are thin front ends
    `src/lib/settings.ts`). The CLI never reads the app's saved settings.
 3. **Settings never contain folders or files.** The frontend owns the settings shape and repairs anything invalid in
    `mergeSettings`.
-4. **Dark theme only, in ume-sync's style:**
-   - deep ink surfaces with violet/teal/gold glows, grain and a vignette;
-   - a violet accent, gold ornaments;
+4. **Dark theme only:**
+   - deep ink surfaces with faint steel/silver/gold glows, grain and a vignette;
+   - a steel-grey accent (`#a9b4c8`) with dark text on it, muted gold ornaments;
+   - the brand mark is Pip (`assets/brand/`); the app icon and title-bar logo use the accent;
    - Nunito Sans with a Cinzel title;
    - a transparent window that draws its own rounded body.
 

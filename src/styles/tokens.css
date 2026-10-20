@@ -1,5 +1,5 @@
-/* Design tokens: every color lives here. Dark only. The look matches ume-sync (and game-forge): deep ink surfaces,
-   a violet accent with a teal partner, gold for ornaments, soft glows behind everything. */
+/* Design tokens: every color lives here. Dark only: deep ink surfaces, a steel-grey accent with a pale silver
+   partner, muted gold for ornaments, faint glows behind everything. */
 :root {
   color-scheme: dark;
 
@@ -16,12 +16,12 @@
   --text-muted: #a1aabe;
   --text-faint: #636d82;
 
-  --accent: #7b5cff;
-  --accent-deep: #5633e6;
-  --accent-2: #5fd4c8;
-  --accent-ink: #b3aaff;
-  --accent-text: #ffffff;
-  --gold: #e6c27a;
+  --accent: #a9b4c8;
+  --accent-deep: #8691a6;
+  --accent-2: #c9ced8;
+  --accent-ink: #d6dce8;
+  --accent-text: #0b0e15;
+  --gold: #c9b58c;
   --accent-soft: color-mix(in oklab, var(--accent) 16%, transparent);
   --accent-line: color-mix(in oklab, var(--accent) 55%, transparent);
 
@@ -34,9 +34,9 @@
   --close-hover: #c42b1c;
 
   /* Glows behind the window's content. */
-  --glow-a: rgb(123 92 255 / 0.15);
-  --glow-b: rgb(95 212 200 / 0.08);
-  --glow-c: rgb(230 194 122 / 0.05);
+  --glow-a: rgb(169 180 200 / 0.15);
+  --glow-b: rgb(201 206 216 / 0.08);
+  --glow-c: rgb(201 181 140 / 0.05);
 
   --checker-a: #151a25;
   --checker-b: #0d1119;
